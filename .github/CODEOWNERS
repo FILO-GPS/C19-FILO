@@ -1,11 +1,47 @@
-# Governance: owner noto. Aggiungere l'altro PM con username GitHub verificato
-# e i responsabili di componenti dopo averli assegnati; serve accesso Write.
-# Per codice non coperto da questa lista, assegnare reviewer umano nella PR.
-/AGENTS.md @MartinaDeLucia
-/agents/ @MartinaDeLucia
-/.clinerules/ @MartinaDeLucia
-/.clineignore @MartinaDeLucia
-/.github/ @MartinaDeLucia
-/docs/ @MartinaDeLucia
-/package.json @MartinaDeLucia
-/package-lock.json @MartinaDeLucia
+# FILO - Code Ownership
+# Le regole più specifiche prevalgono su quelle precedenti.
+# I Code Owner devono avere accesso Write alla repository.
+
+# Responsabilita generale - Project Managers
+* @alessraia @MartinaDeLucia
+
+# Componenti applicative
+/frontend/ @alessraia @MartinaDeLucia
+/backend/ @alessraia @MartinaDeLucia
+/extension/ @alessraia @MartinaDeLucia
+/tests/ @alessraia @MartinaDeLucia
+
+# Persistenza e database
+/backend/prisma/ @alessraia @MartinaDeLucia
+/backend/prisma.config.ts @alessraia @MartinaDeLucia
+/scripts/ @alessraia @MartinaDeLucia
+/compose.yml @alessraia @MartinaDeLucia
+
+# Documentazione e modelli progettuali
+/docs/ @alessraia @MartinaDeLucia
+/README.md @alessraia @MartinaDeLucia
+
+# Governance e workflow agentico
+/AGENTS.md @alessraia @MartinaDeLucia
+/agents/ @alessraia @MartinaDeLucia
+/.clinerules/ @alessraia @MartinaDeLucia
+/.clineignore @alessraia @MartinaDeLucia
+/.github/ @alessraia @MartinaDeLucia
+/.husky/ @alessraia @MartinaDeLucia
+
+# Dipendenze e configurazioni tecnologiche condivise
+**/package.json @alessraia @MartinaDeLucia
+**/package-lock.json @alessraia @MartinaDeLucia
+**/tsconfig*.json @alessraia @MartinaDeLucia
+**/next.config.ts @alessraia @MartinaDeLucia
+**/vite.config.ts @alessraia @MartinaDeLucia
+**/.env.example @alessraia @MartinaDeLucia
+/.env.test.example @alessraia @MartinaDeLucia
+/.npmrc @alessraia @MartinaDeLucia
+/.nvmrc @alessraia @MartinaDeLucia
+/.gitignore @alessraia @MartinaDeLucia
+/.gitattributes @alessraia @MartinaDeLucia
+/.prettierignore @alessraia @MartinaDeLucia
+/.prettierrc.json @alessraia @MartinaDeLucia
+/eslint.config.mjs @alessraia @MartinaDeLucia
+/vitest*.config.mts @alessraia @MartinaDeLucia
