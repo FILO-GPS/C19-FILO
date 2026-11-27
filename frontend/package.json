@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "version": "0.1.0",
+  "name": "@filo/frontend",
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "16.4.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "postcss": "^8.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}

@@ -1,0 +1,12 @@
+# Configurazione GitHub a cura dei PM
+
+1. Prima di caricare artefatti, rendere la repository privata; verificare piano GitHub e supporto di ruleset e CODEOWNERS. La repository è di un account personale, le impostazioni amministrative spettano al proprietario.
+2. Invitare tutti i TM come collaboratori e verificare accesso in scrittura. Aggiungere nel CODEOWNERS l'altro PM e i responsabili reali usando username GitHub verificati; nessun placeholder attivo. Per una PR del proprietario serve un code owner diverso dall'autore sulle aree protette.
+3. In Settings → Actions → General lasciare token in sola lettura e non consentire a GitHub Actions di creare/approvare PR. Nessuna chiave LLM in Actions. Creare, se usate, le label `task-agente`, `fase:piano`, `fase:implementazione`, `fase:test`; non sono trigger. Provare il modulo in Issues → New issue. YouTrack resta fonte primaria dei task; lo stesso schema specifica/ambito/verifica può essere usato direttamente in YouTrack.
+4. Dopo verifica locale, generare e versionare il lockfile e fare il primo push umano su main. Verificare che il job `FILO checks` compaia e passi, senza disabilitare verifiche. Non pubblicare segreti o dati personali.
+5. Settings → Rules → Rulesets → nuovo branch ruleset per main, Active. Richiedere PR, almeno una approvazione indipendente, code owner review (dopo configurazione completa), annullamento approvazioni obsolete, risoluzione conversazioni, status check `FILO checks` selezionato dall'esecuzione reale, niente force push e cancellazioni. Nessun bypass ordinario. Se il piano non consente queste regole su repository private, risolvere prima di autorizzare lavoro parallelo.
+6. Provare una PR pilota con check fallito e verificare blocco del merge; correggere, CI verde, review indipendente e merge umano. Testare una sessione Cline Plan/Act e i due ruoli separati, verificando che nessun comando di scrittura Git sia eseguito dall'agente. Documentare esiti e limiti.
+7. Autorizzare implementazione parallela dopo caricamento/validazione degli artefatti pertinenti, setup funzionante e assegnazione esplicita di schema, model, contratti condivisi. Il progetto deve coprire le funzionalità High; per quelle aggiuntive il PM coordina priorità e dipendenze.
+
+## Controlli di processo
+Monitorare in YouTrack (o con link alle PR) piano, reviewer, esiti CI, copertura frame, giri di revisione e problemi post-merge. Le metriche servono a correggere il processo, non a classificare i TM.

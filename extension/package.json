@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "version": "0.1.0",
+  "name": "@filo/extension",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0",
+    "@types/chrome": "^0.0.300",
+    "vite": "6.4.6"
+  },
+  "type": "module"
+}

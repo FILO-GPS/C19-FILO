@@ -1,0 +1,63 @@
+{
+  "private": true,
+  "version": "0.1.0",
+  "name": "c19-filo",
+  "workspaces": [
+    "frontend",
+    "backend",
+    "extension"
+  ],
+  "engines": {
+    "node": ">=22.14.0 <23",
+    "npm": ">=10 <11"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n frontend,backend \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "npm run dev -w frontend",
+    "dev:backend": "npm run dev -w backend",
+    "dev:ext": "npm run dev -w extension",
+    "start:backend": "npm run start -w backend",
+    "build": "npm run build:frontend && npm run build:backend && npm run build:ext",
+    "build:frontend": "npm run build -w frontend",
+    "build:backend": "npm run build -w backend",
+    "build:ext": "npm run build -w extension",
+    "lint": "eslint frontend backend extension tests --max-warnings=0",
+    "type-check": "npm run type-check --workspaces && tsc --noEmit -p tsconfig.tests.json",
+    "format": "prettier --write \"{frontend,backend,extension,tests}/**/*.{ts,tsx,css,json,html}\"",
+    "test": "vitest run --config vitest.config.mts",
+    "test:coverage": "vitest run --config vitest.config.mts --coverage",
+    "test:integration": "vitest run --config vitest.integration.config.mts",
+    "verify": "npm run lint && npm run type-check && npm test && npm run test:integration && npm run build",
+    "db:generate": "npm run db:generate -w backend",
+    "db:migrate": "npm run db:migrate -w backend",
+    "db:deploy:test": "node scripts/migrate-test.mjs",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitest/coverage-v8": "5.1.2",
+    "concurrently": "^9.0.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.6",
+    "husky": "^9.1.0",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "~5.7.3",
+    "vite": "6.4.6",
+    "vitest": "5.1.2"
+  },
+  "lint-staged": {
+    "{frontend,backend,extension,tests}/**/*.{ts,tsx}": [
+      "eslint --max-warnings=0",
+      "prettier --write"
+    ],
+    "{frontend,backend,extension,tests}/**/*.{css,json,html}": "prettier --write"
+  },
+  "overrides": {
+    "@prisma/config": {
+      "effect": "3.22.1"
+    }
+  }
+}

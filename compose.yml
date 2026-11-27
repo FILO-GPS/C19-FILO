@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: filo
+      POSTGRES_PASSWORD: filo_local_only
+      POSTGRES_DB: filo_dev
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - filo_pg:/var/lib/postgresql/data
+      - ./scripts/init-test-db.sql:/docker-entrypoint-initdb.d/01-init-test-db.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U filo -d filo_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+volumes:
+  filo_pg:

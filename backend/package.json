@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "version": "0.1.0",
+  "name": "@filo/backend",
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc --noEmit",
+    "db:generate": "prisma generate",
+    "db:migrate": "node ../scripts/migrate-dev.mjs"
+  },
+  "dependencies": {
+    "@prisma/client": "7.10.1",
+    "next": "16.4.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "prisma": "7.10.1"
+  }
+}

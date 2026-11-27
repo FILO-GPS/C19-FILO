@@ -1,0 +1,11 @@
+# Governance: owner noto. Aggiungere l'altro PM con username GitHub verificato
+# e i responsabili di componenti dopo averli assegnati; serve accesso Write.
+# Per codice non coperto da questa lista, assegnare reviewer umano nella PR.
+/AGENTS.md @MartinaDeLucia
+/agents/ @MartinaDeLucia
+/.clinerules/ @MartinaDeLucia
+/.clineignore @MartinaDeLucia
+/.github/ @MartinaDeLucia
+/docs/ @MartinaDeLucia
+/package.json @MartinaDeLucia
+/package-lock.json @MartinaDeLucia

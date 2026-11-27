@@ -1,0 +1,8 @@
+// Entità e associazioni devono derivare dai modelli approvati.
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+datasource db {
+  provider = "postgresql"
+}

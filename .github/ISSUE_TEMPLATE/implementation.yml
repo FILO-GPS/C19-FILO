@@ -1,0 +1,42 @@
+name: Task di implementazione o tecnico
+description: Specifica, ambito e verifica di un task FILO
+title: "[TASK] "
+body:
+  - type: input
+    id: youtrack
+    attributes:
+      label: Task YouTrack
+      description: ID o collegamento al task di riferimento
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: Obiettivo e riferimenti
+      description: RF/RNF/UC pertinenti, priorità e dipendenze; per attività tecniche descrivere il risultato atteso.
+    validations:
+      required: true
+  - type: textarea
+    id: spec
+    attributes:
+      label: Specifica (file da leggere)
+      description: Percorsi esatti dei modelli e delle sezioni rilevanti; se non applicabili motivare.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Ambito
+      description: Workspace, classi, metodi, interfacce o file autorizzati.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verifica
+      description: Criteri di accettazione e frame approvati se pertinenti; per task tecnici indicare controlli specifici.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "Piano approvato prima di implementare; Git, PR e merge esclusivamente umani."
