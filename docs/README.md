@@ -1,6 +1,6 @@
 # Indice degli artefatti progettuali
 
-I documenti approvati sono la specifica, non un suggerimento. I TM caricano e verificano le conversioni; i PM approvano eventuali revisioni. Conservare ID, priorità, nomi, tipi, molteplicità, sequenze e condizioni. Nessun artefatto di esempio va spacciato per quello ufficiale. Non caricare dati personali superflui; gli originali integrali solo nel repository privato autorizzato.
+I documenti approvati sono la specifica, non un suggerimento. I TM caricano e verificano le conversioni; i PM approvano eventuali revisioni. Conservare ID, priorità, nomi, tipi, molteplicità, sequenze e condizioni. Nessun artefatto di esempio va spacciato per quello ufficiale. Pubblicare solo documenti autorizzati, privi di credenziali, informazioni riservate e dati personali non necessari.
 
 | Percorso | Contenuto da mantenere | Formato |
 | --- | --- | --- |
@@ -20,6 +20,6 @@ I documenti approvati sono la specifica, non un suggerimento. I TM caricano e ve
 | `test/` | Category Partition per UC, test frame, scelte/vincoli, attesi, ID | Markdown |
 | `specifiche-tecniche/` | Stack approvato, istruzioni e scelta LLM | Markdown |
 
-Per ogni file derivato indicare origine (documento, versione, sezione/pagina), data e revisore. Se un diagramma nasce in altro formato testuale leggibile, mantenere il sorgente e aggiornare questo indice. Evitare duplicazioni non necessarie. I modelli approvati modificati si aggiornano insieme al codice nella relativa PR; per gli originali seguire anche il processo documentale del team.
+Per ogni file derivato indicare origine (documento, versione, sezione/pagina), data e revisore. Se un diagramma nasce in altro formato testuale leggibile, mantenere il sorgente e aggiornare questo indice. Evitare duplicazioni non necessarie. I modelli approvati modificati si aggiornano insieme al codice nella relativa PR; per gli originali seguire anche il processo documentale del team. In caso di divergenza tra un originale approvato e la sua conversione, fermarsi e richiedere ai PM la verifica della versione di riferimento; allineare i due artefatti senza modifiche autonome. Mantenere aggiornata la matrice di tracciabilità già adottata dal team, collegando le evidenze implementative e di test quando disponibili.
 
 La Category Partition è progettata da persone sugli UC. Il codice può essere organizzato per funzionalità e sottosistemi: il task specifica RF/RNF e UC pertinenti, oppure criteri tecnici per task infrastrutturali. La copertura High è requisito del rilascio, non un vincolo che ogni singolo task realizzi tutti gli UC.

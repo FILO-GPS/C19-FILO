@@ -16,6 +16,7 @@
 ## Collaborazione agentica
 - Modalità: manuale / assistita; agente e modello se utilizzati:
 - Test/revisione agentici: sessioni indipendenti, se utilizzate:
+- Esiti della revisione agentica e risoluzione dei rilievi (se svolta):
 - Tentativi o criticità rilevanti:
 
 ## Checklist autore
